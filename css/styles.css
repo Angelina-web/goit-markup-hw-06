@@ -628,9 +628,6 @@ footer {
   margin: 0 auto;
 
 }
-.media{
-margin-bottom: 72px;
-}
 .media-text {
   font-weight: 500;
   font-size: 16px;
@@ -759,6 +756,9 @@ margin-bottom: 72px;
   .subscribe-container{
     margin: 0 auto;
   }
+  .media {
+  margin-bottom: 72px;
+}
 }
 @media screen and (min-width: 768px) {
   .container-footer {
@@ -780,6 +780,7 @@ margin-bottom: 72px;
     width: 100%;
     max-width: 1158px;
     margin: 0 auto;
+    gap: unset;
   }
   .logo-container{
     margin-right: 120px;
