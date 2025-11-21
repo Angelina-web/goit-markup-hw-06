@@ -218,14 +218,22 @@ img {
   padding: 16px 32px;
   display: block;
   min-width: 169px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms ease-in-out;
 }
 .butn:hover,
 .butn:focus {
   background-color: #404bbf;
+  transform: scale(1.05);
+  animation: pulse 1s infinite alternate;
 }
-.butn:active {
-  transform: scale(0.95);
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(77, 90, 229, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 20px 10px rgba(77, 90, 229, 0);
+  }
 }
 
 @media screen and (max-width: 767px) and (min-resolution: 2x) {
@@ -326,7 +334,6 @@ img {
   align-items: center;
   gap: 72px;
 }
-
 @media screen and (max-width: 767px) {
   .title-goal {
     text-align: center;
@@ -517,7 +524,7 @@ img {
 .portfolio-list:hover .overlay {
   opacity: 1;
   transform: translateY(0%);
-  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .title-portfolio {
   font-weight: 700;
